@@ -1,4 +1,4 @@
-
+ 
 class Node:
 
     def __init__(self, x):
@@ -26,12 +26,13 @@ class Lista:
             return
 
         self.tail.next = node
+        self.tail = node
         node.prev = self.tail
 
 
     def add(self, node):
         """
-        Inserir um elemento sempre no inicio da lista
+        Inserir um elemento sempre no inicio da lista 
 
         :param node:
         :return:
@@ -43,6 +44,7 @@ class Lista:
 
         node.next = self.init
         self.init = node
+        node.prev = self.init
 
     def __str__(self):
         str_aux = '['
