@@ -42,9 +42,10 @@ class Lista:
             self.tail = node
             return
 
+        self.init.next = node
         node.next = self.init
         self.init = node
-        node.prev = self.init
+
 
     def __str__(self):
         str_aux = '['
