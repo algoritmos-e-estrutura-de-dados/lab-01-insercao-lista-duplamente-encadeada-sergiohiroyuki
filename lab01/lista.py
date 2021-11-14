@@ -42,7 +42,7 @@ class Lista:
             self.tail = node
             return
 
-        self.init.next = node
+        self.init.prev = node
         node.next = self.init
         self.init = node
 
